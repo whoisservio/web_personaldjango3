@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Acerca de{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/c.jpg' %}{% endblock %}
+
+{% block headers %}
+        <h2>Acerca de</h2>
+{% endblock %}
+
+{% block content %}
+<h2 class="fw-300 centrar-texto">Quienes Somos</h2>
+<div class="container">
+    <div class="row">   
+      <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
+      </div>
+      <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">ChoneTech</h2>   
+        <p>En ChoneTech, somos una empresa líder en el suministro de componentes electrónicos de alta calidad. Vendemos todo tipo de componentes electrónicos
+        desde una fuente de alimentación hasta la última gráfica del mercado</p>
+      </div>
+    </div>  
+  </div>
+{% endblock %}

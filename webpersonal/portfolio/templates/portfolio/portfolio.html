@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/c.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Portafolio</h1>
+    <span class="subheading">Currículo</span>
+{% endblock %}
+
+{% block content %}
+    <h2 class="fw-300 centrar-texto">Productos</h2>
+    <div class="contenedor-anuncios">
+        {% for project in projects %}
+        <div class="anuncio">
+            <img class="img-fluid" src="{{ project.imagen.url }}" alt="">
+            <div class="contenido-anuncio">
+                <h3>{{ project.titulo }}</h3>
+                <p>{{ project.descripcion }}</p>
+                <p class="precio">$300</p>
+                <a href="{{ project.link }}" class="boton boton-amarillo d-block">Comprar</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
